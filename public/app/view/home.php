@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if(!$_SESSION['user'])
 {
     header('Location: app/session/login.php');

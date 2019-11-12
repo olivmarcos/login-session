@@ -25,8 +25,7 @@ if ($_POST['email']) {
             $_SESSION['errors'] = null;
             $_SESSION['user'] = $user['name'];
             $exp = time() + 60;
-            setcookie('user', $user['name'], $ex);
-
+            setcookie('user', $user['name'], $exp);
             header('Location: /app/view/home.php');
         }
   
