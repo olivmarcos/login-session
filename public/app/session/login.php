@@ -26,7 +26,10 @@ if ($_POST['email']) {
         if ($validEmail && $validPass) {
             $_SESSION['errors'] = null;
             $_SESSION['user'] = $user['name'];
-            header('Location: home.php');
+            $exp = time() + 60;
+            setcookie('user', $user['name'], $ex);
+
+            header('Location: /app/view/home.php');
         }
   
     }

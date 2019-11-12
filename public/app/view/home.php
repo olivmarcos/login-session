@@ -1,5 +1,13 @@
 <?php
 session_start();
+// if($_COOKIE['user'])
+// {
+//     $_SESSION['user'] = $_COOKIE['user'];
+// }
+if(!$_SESSION['user'])
+{
+    header('Location: app/session/login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +20,6 @@ session_start();
 <body>
     <h1> <?= $_SESSION['user'] ?>, You're connected!</h1>
 
-    <a href="logout.php">Log out</a>
+    <a href="app/session/logout.php">Log out</a>
 </body>
 </html>
