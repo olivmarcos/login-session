@@ -7,7 +7,7 @@ $password = $_POST['password'];
 if ($_POST['email']) {
     $users = [
         [
-            "name" => "Narcos Oliveira",
+            "name" => "Marcos Oliveira",
             "email" => "marcos@email.com",
             "password" => "159753",
         ],
@@ -26,7 +26,7 @@ if ($_POST['email']) {
         if ($validEmail && $validPass) {
             $_SESSION['errors'] = null;
             $_SESSION['user'] = $user['name'];
-            header('Location: app/home.php');
+            header('Location: home.php');
         }
   
     }
@@ -63,12 +63,11 @@ if ($_POST['email']) {
             <button>Enter</button>
         </form>
         <div class="error">
-                <?php 
-                if($_SESSION['errors'])
-                {  
-                    var_dump($_SESSION['errors']);
-                }
-                ?>
+                <?php if ($_SESSION['errors']): ?>
+                    <?php foreach ($_SESSION['errors'] as $error): ?>
+                        <p><?= $error ?></p>
+                    <?php endforeach?>
+                <?php endif ?>
         </div>
     </main>
 </body>

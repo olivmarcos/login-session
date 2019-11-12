@@ -10,7 +10,7 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <h1>You're connected!</h1>
+    <h1> <?= $_SESSION['user'] ?>, You're connected!</h1>
 
     <a href="logout.php">Log out</a>
 </body>
