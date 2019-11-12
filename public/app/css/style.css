@@ -41,9 +41,10 @@ input {
 
 button {
     padding: .3rem;
+    margin-top: 1rem;
 }
 
-.error {
+p {
     margin-top: 2rem;
     background-color: #F25C05;
     color: white;
