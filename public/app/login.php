@@ -7,13 +7,13 @@ $password = $_POST['password'];
 if ($_POST['email']) {
     $users = [
         [
-            "name" => "Marcos Oliveira",
-            "email" => "marcos@email.com",
+            "name" => "Jon Snow",
+            "email" => "jon@email.com",
             "password" => "159753",
         ],
         [
-            "name" => "Ana Carolina",
-            "email" => "anacarolina@email.com",
+            "name" => "Daenerys Targaryen",
+            "email" => "daenerys@email.com",
             "password" => "147852",
         ],
     ];

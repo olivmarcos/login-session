@@ -1,3 +1,3 @@
 <?php
 
-require_once(__DIR__. '/app/login.php');
+require_once('app/login.php');
